@@ -12,7 +12,7 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { NAVLINKS, PRODUCT_CATEGORIES } from "./constants";
+import { NAVLINKS, PRODUCT_CATEGORIES } from "./data";
 import ThemeToggle from "@/components/comp-182";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
