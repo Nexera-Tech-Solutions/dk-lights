@@ -1,7 +1,26 @@
+import FAQs from "./native-components/FAQs/FAQs";
+import FeatureCard from "./native-components/FeatureCard/FeatureCard";
+import Testimonial from "./native-components/Testimonial/Testimonial";
+
 export default function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
+      {/* Hero section */}
+
+      {/* Features section */}
+      <section id="features" className="w-full">
+        <FeatureCard />
+      </section>
+
+      {/* Testimonial Marquee */}
+      <section id="testimaonial-marquee">
+        <Testimonial />
+      </section>
+
+      {/* FAQ Section */}
+      <div>
+        <FAQs />
+      </div>
     </div>
   );
 }
