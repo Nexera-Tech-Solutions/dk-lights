@@ -6,7 +6,6 @@ export default function Home() {
         <div>
             {/* Hero section */}
 
-
             {/* Features section */}
             <section id="features" className="w-full">
                 <FeatureCard />
