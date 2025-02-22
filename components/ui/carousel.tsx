@@ -122,47 +122,15 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   );
 };
 
-interface CarouselControlProps {
-  type: string;
-  title: string;
-  handleClick: () => void;
-}
-
-const CarouselControl = ({
-  type,
-  title,
-  handleClick,
-}: CarouselControlProps) => {
-  return (
-    <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === "previous" ? "rotate-180" : ""
-      }`}
-      title={title}
-      onClick={handleClick}
-    >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
-    </button>
-  );
-};
-
 interface CarouselProps {
   slides: SlideData[];
 }
 
-export default function Carousel({ slides }: CarouselProps) {
-  const [current, setCurrent] = useState(0);
-
-  const handlePreviousClick = () => {
-    const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
-  };
-
-  const handleNextClick = () => {
-    const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
-  };
-
+export default function Carousel({
+  slides,
+  current,
+  setCurrent,
+}: CarouselProps & { current: number; setCurrent: (index: number) => void }) {
   const handleSlideClick = (index: number) => {
     if (current !== index) {
       setCurrent(index);
@@ -173,11 +141,11 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[80vmin] h-[70vmin] mx-auto"
+      className="relative w-[80vmin] h-[70vmin] mx-[300px]"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
@@ -192,20 +160,6 @@ export default function Carousel({ slides }: CarouselProps) {
           />
         ))}
       </ul>
-
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)] ">
-        <CarouselControl
-          type="previous"
-          title="Go to previous slide"
-          handleClick={handlePreviousClick}
-        />
-
-        <CarouselControl
-          type="next"
-          title="Go to next slide"
-          handleClick={handleNextClick}
-        />
-      </div>
     </div>
   );
 }
