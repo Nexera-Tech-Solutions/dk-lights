@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import Image from "next/image";
 import React from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";

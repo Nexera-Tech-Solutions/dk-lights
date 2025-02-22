@@ -1,5 +1,4 @@
 import { useRef, useId, useEffect } from "react";
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 interface SlideData {
   title: string;
@@ -60,7 +59,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title } = slide;
+  const { src, title } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
