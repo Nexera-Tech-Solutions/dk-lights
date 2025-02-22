@@ -1,4 +1,4 @@
-import { Amphora, Lamp, UserRoundPen } from "lucide-react";
+import { Amphora, Lamp, NotepadTextDashed, UserRoundPen } from "lucide-react";
 
 export const FEATURES = [
     {
@@ -15,5 +15,10 @@ export const FEATURES = [
         title: "Artisan Crafted Fixtures",
         body: "Handcrafted or uniquely designed lighting fixtures that combine modern technology with timeless aesthetics.",
         icon: Amphora,
+    },
+    {
+        title: "ODM (Patent Design)",
+        body: "Exclusive, patented designs that set the brand apart in both innovation and visual appeal.",
+        icon: NotepadTextDashed,
     },
 ];
