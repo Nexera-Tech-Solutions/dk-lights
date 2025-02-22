@@ -1,3 +1,4 @@
+import CatalogDownload from "./native-components/CatalogDownload/CatalogDownload";
 import FAQs from "./native-components/FAQs/FAQs";
 import FeatureCard from "./native-components/FeatureCard/FeatureCard";
 import HomeHeroSection from "./native-components/HomeHeroSection/HomeHeroSection";
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero section */}
-      <section id="hero-section" className="w-full">
+      <section id="hero-section">
         <HomeHeroSection />
       </section>
 
@@ -20,9 +21,14 @@ export default function Home() {
       <section id="testimaonial-marquee">
         <Testimonial />
       </section>
-        
+
+      {/* Features section */}
+      <section id="features" className="w-full">
+        <CatalogDownload />
+      </section>
+
       {/* FAQ Section */}
-      <div id="faqs">
+      <div id="faqs" className="w-full">
         <FAQs />
       </div>
     </div>
