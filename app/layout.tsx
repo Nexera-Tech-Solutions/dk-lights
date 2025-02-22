@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-
 import Header from "./native-components/Header/Header";
 import Footer from "./native-components/Footer/Footer";
 
