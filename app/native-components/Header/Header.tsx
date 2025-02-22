@@ -22,13 +22,14 @@ const Header = () => {
 
     return (
         <div className="w-full  shadow-sm">
-            <header className="max-w-[1000px] mx-auto py-3 flex flex-row justify-between items-center">
+            <header className="hidden md:flex max-w-[1000px] mx-auto py-3 flex-row justify-between items-center">
                 <Link href="/">
                     <Image
                         src="/global/logo.jpeg"
                         alt="logo"
                         width={50}
                         height={50}
+                        className="rounded-full aspect-square object-cover"
                         className="rounded-full"
                     />
                 </Link>
