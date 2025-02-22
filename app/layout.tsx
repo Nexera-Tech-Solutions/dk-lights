@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./native-components/Header/Header";
 import Footer from "./native-components/Footer/Footer";
+import HomeHeroSection from "./native-components/HomeHeroSection/HomeHeroSection";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
+        <HomeHeroSection />
         {children}
         <div className="flex flex-col gap-6 bg-black py-4">
           <Footer />
