@@ -12,7 +12,7 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { NAVLINKS, PRODUCT_CATEGORIES } from "@/lib/constants";
+import { NAVLINKS, PRODUCT_CATEGORIES } from "./constants";
 import ThemeToggle from "@/components/comp-182";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
@@ -135,6 +135,6 @@ const ListItem = React.forwardRef<
     );
 });
 
-ListItem.displayName = "ListItem"
+ListItem.displayName = "ListItem";
 
 export default Header;
