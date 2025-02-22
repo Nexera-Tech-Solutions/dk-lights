@@ -30,6 +30,7 @@ const Header = () => {
                         width={50}
                         height={50}
                         className="rounded-full aspect-square object-cover"
+                        className="rounded-full"
                     />
                 </Link>
 
