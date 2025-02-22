@@ -5,12 +5,10 @@ import React, { useState } from "react";
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
@@ -112,7 +110,7 @@ const Header = () => {
 };
 
 const ListItem = React.forwardRef<
-    React.ElementRef<"a">,
+    React.ComponentRef<"a">,
     React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
     return (
@@ -126,7 +124,7 @@ const ListItem = React.forwardRef<
                 {...props}
             >
                 <div className="text-sm font-medium leading-none flex flex-row justify-between items-center">
-                    {title}{" "}
+                    {title || children}{" "}
                     <ChevronRight
                         size={12}
                         className="group-hover:translate-x-1 transition-all"
@@ -136,5 +134,7 @@ const ListItem = React.forwardRef<
         </NavigationMenuLink>
     );
 });
+
+ListItem.displayName = "ListItem"
 
 export default Header;
