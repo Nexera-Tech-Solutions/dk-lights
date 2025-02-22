@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
 import { ProductLinks, QuickLinks, SocialMediaImages } from "./data";
-import Image from "../ui/Image";
 
 import { getCurrentYear, supportContactEmail } from "@/app/utils/constant";
 import Link from "next/link";
-
-console.log("SocialMediaImages", SocialMediaImages);
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -15,10 +13,11 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <div className="flex justify-between items-center flex-wrap md:justify-start md:gap-20">
             <img
-              src="https://cdn.dotpe.in/longtail/store-logo/9050308/QYiFTRQW.webp"
-              alt="DriveX Logo"
-              width={80}
-              height={80}
+              src="/global/logo.jpeg"
+              alt="logo"
+              width={50}
+              height={50}
+              className="rounded-full"
             />
           </div>
 
