@@ -1,3 +1,4 @@
+import CatalogDownload from "./native-components/CatalogDownload/CatalogDownload";
 import ContactForm from "./native-components/ContactForm/ContactForm";
 import FAQs from "./native-components/FAQs/FAQs";
 import FeatureCard from "./native-components/FeatureCard/FeatureCard";
@@ -13,9 +14,16 @@ export default function Home() {
                 <HomeHeroSection />
             </section>
 
+
             {/* Features section */}
             <section id="features" className="w-full">
                 <FeatureCard />
+            </section>
+
+
+           {/* Catalogue section */}
+            <section id="features" className="w-full">
+                <CatalogDownload />
             </section>
 
             {/* Testimonial Marquee */}
@@ -33,7 +41,7 @@ export default function Home() {
                 <FAQs />
             </section>
 
-            {/* Contaact Form */}
+            {/* Contact Form */}
             <section>
                 <ContactForm />
             </section>

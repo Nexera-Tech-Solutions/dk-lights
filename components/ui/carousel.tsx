@@ -89,7 +89,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -102,20 +102,22 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
           )}
+          {/* commented for future use */}
+          {/* <article
+            className={`relative p-[5vmin] px-[20%] transition-opacity duration-1000 ease-in-out flex justify-center items-center flex-col flex-start ${
+              current === index
+                ? "opacity-100 visible px-32"
+                : "opacity-0 invisible"
+            }`}
+          >
+            <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
+              {title}
+            </h2>
+            <div className="flex justify-center my-5 mb-20">
+              <InteractiveHoverButton>{button}</InteractiveHoverButton>
+            </div>
+          </article> */}
         </div>
-
-        <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
-            current === index ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
-        >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
-            {title}
-          </h2>
-          <div className="flex justify-center my-5 mb-20">
-            <InteractiveHoverButton>{button}</InteractiveHoverButton>
-          </div>
-        </article>
       </li>
     </div>
   );

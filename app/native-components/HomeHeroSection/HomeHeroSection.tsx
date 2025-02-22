@@ -51,7 +51,7 @@ const HomeHeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Illuminate Your Space with Elegance
@@ -63,7 +63,7 @@ const HomeHeroSection = () => {
           </p>
         </div>
 
-        <div className="relative overflow-hidden w-full h-full ">
+        <div className="relative w-full flex ">
           <Carousel
             slides={HeroSectionSlides}
             current={current}
