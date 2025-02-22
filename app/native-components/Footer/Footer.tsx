@@ -46,7 +46,9 @@ const Footer = () => {
           <span className="flex flex-col gap-4">
             <div className="flex gap-10">
               <div>
-                <p className="text-white text-lg font-semibold">Quick Links</p>
+                <p className="text-white text-lg font-semibold pb-4">
+                  Quick Links
+                </p>
 
                 {QuickLinks.map((data, index) => (
                   <div key={index} className="py-1.5">
@@ -68,7 +70,9 @@ const Footer = () => {
               <div className="border-l border-gray-400 h-auto"></div>
 
               <div>
-                <p className="text-white text-lg font-semibold">Products</p>
+                <p className="text-white text-lg font-semibold pb-4">
+                  Products
+                </p>
 
                 {ProductLinks.map((data, index) => (
                   <div key={index} className="py-1.5">

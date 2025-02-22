@@ -27,29 +27,29 @@ export const QuickLinks: LinkType[] = [
     flag: "enable_privacy_policy_page",
   },
   { text: "Contact Us", url: "/contact-us", flag: "enable_contact_us_page" },
-  { text: "Brand Logo", url: "/brand-logo", flag: "enable_brand_logo_page" },
-  { text: "Media", url: "/media", flag: "enable_media_page" },
   { text: "Terms of Service", url: "/terms", flag: "enable_terms_page" },
 ];
 
 export const ProductLinks: LinkType[] = [
-  { text: "Shower", url: "/shower", flag: "enable_shower_page" },
-  { text: "Kitchen", url: "/kitchen", flag: "enable_kitchen_page" },
+  { text: "Ceiling Lighting", url: "/shower", flag: "enable_shower_page" },
+  { text: "Wall Lighting", url: "/kitchen", flag: "enable_kitchen_page" },
   {
-    text: "Diverter & Mixers",
+    text: "Outdoor Lighting",
     url: "/diverter-mixers",
     flag: "enable_diverter_mixers_page",
   },
-  { text: "Faucets", url: "/faucets", flag: "enable_faucets_page" },
+  { text: "Smart Lighting", url: "/faucets", flag: "enable_faucets_page" },
   { text: "Basin", url: "/basin", flag: "enable_basin_page" },
   {
-    text: "Water Closet",
+    text: "Architectural Lighting",
     url: "/water-closet",
     flag: "enable_water_closet_page",
   },
-  { text: "Wellness", url: "/wellness", flag: "enable_wellness_page" },
-  { text: "Bath Tub", url: "/bath-tub", flag: "enable_bath_tub_page" },
-  { text: "Accessories", url: "/accessories", flag: "enable_accessories_page" },
+  {
+    text: "Commercial & Industrial Lighting",
+    url: "/wellness",
+    flag: "enable_wellness_page",
+  },
 ];
 
 export const SocialMediaImages: SocialMediaImagesType[] = [
