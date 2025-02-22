@@ -113,7 +113,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
             {title}
           </h2>
-          <div className="flex justify-center my-5">
+          <div className="flex justify-center my-5 mb-20">
             <InteractiveHoverButton>{button}</InteractiveHoverButton>
           </div>
         </article>
