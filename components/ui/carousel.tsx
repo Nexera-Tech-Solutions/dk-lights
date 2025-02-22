@@ -103,7 +103,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
           )}
-          <article
+          {/* commented for future use */}
+          {/* <article
             className={`relative p-[5vmin] px-[20%] transition-opacity duration-1000 ease-in-out flex justify-center items-center flex-col flex-start ${
               current === index
                 ? "opacity-100 visible px-32"
@@ -116,7 +117,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             <div className="flex justify-center my-5 mb-20">
               <InteractiveHoverButton>{button}</InteractiveHoverButton>
             </div>
-          </article>
+          </article> */}
         </div>
       </li>
     </div>
