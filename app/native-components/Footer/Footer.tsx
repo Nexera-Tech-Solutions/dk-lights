@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row gap-12 justify-center">
         <div className="flex flex-col gap-6">
           <div className="flex justify-between items-center flex-wrap md:justify-start md:gap-20">
-            <img
+            <Image
               src="/global/logo.jpeg"
               alt="logo"
               width={50}

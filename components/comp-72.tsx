@@ -15,5 +15,5 @@ export default function Component({ ...props }) {
             </label>
             <Textarea id={id} placeholder="" {...props} />
         </div>
-    );``
+    );
 }

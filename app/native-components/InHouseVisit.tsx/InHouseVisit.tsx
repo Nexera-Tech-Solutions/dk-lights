@@ -28,7 +28,7 @@ const InHouseVisit = () => {
                     <CardDescription className="mx-6">
                         Visit our showroom and witness cutting-edge lighting
                         innovations, from smart ambient solutions to handcrafted
-                        masterpieces. Let's illuminate your space with
+                        masterpieces. Let{`&apos`}s illuminate your space with
                         brilliance!
                     </CardDescription>
                     <CardContent className="my-2">

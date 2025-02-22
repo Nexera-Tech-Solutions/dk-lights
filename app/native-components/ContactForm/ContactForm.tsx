@@ -1,10 +1,7 @@
-//@ts-nocheck
 "use client";
 
 import React from "react";
 import { useActionState } from "react";
-import InputWithFloatingLabel from "../../../components/comp-32";
-import TextareaWithFloatingLabel from "../../../components/comp-72";
 import { submitContactForm } from "@/app/actions/contactForm.actions";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -19,6 +16,7 @@ const initialState = {
 
 const ContactForm = () => {
     const [state, formAction, pending] = useActionState(
+        //@ts-expect-error its just a weirs error idk
         submitContactForm,
         initialState
     );
@@ -26,7 +24,7 @@ const ContactForm = () => {
     return (
         <div className="max-w-[400px] my-20 mx-auto px-2">
             <h4 className="text-xl font-extrabold">
-                Don't hesitate to reach out to us
+                Don{`&apos`}t hesitate to reach out to us
             </h4>
 
             <form action={formAction} className="space-y-3">
@@ -88,9 +86,11 @@ const ContactForm = () => {
                         </p>
                     )}
                 </div>
+
                 <Button type="submit" disabled={pending}>
                     {pending ? "Submitting..." : "Submit"}
                 </Button>
+
                 {state?.message && (
                     <p className="mt-4 text-green-500">{state.message}</p>
                 )}

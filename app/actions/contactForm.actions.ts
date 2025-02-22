@@ -39,10 +39,15 @@ export async function submitContactForm(
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // Here you would typically save the data to a database
-    // For this example, we'll just return a success message
+    // For now we'll just return a success message
     return {
         message: "Thank you for your message. We will get back to you soon!",
-        errors: {},
+        errors: {
+            name: undefined,
+            email: undefined,
+            mobileNumber: undefined,
+            query: undefined,
+        },
         values: {},
     };
 }
