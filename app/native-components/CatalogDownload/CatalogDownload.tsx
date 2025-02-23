@@ -6,10 +6,13 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 
 const CatalogDownload = () => {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center py-10">
       <motion.div
         className="bg-white rounded-lg shadow-xl p-10 flex items-center justify-between gap-16 "
-        whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.3, ease: "easeOut" },
+        }}
       >
         <div className="flex items-center justify-center">
           <Image
@@ -20,7 +23,9 @@ const CatalogDownload = () => {
           />
         </div>
         <div className="text-center mt-4">
-          <h2 className="text-3xl font-bold">Discover the Latest Trends</h2>
+          <h2 className="text-3xl font-bold pb-2">
+            Discover the Latest Trends
+          </h2>
           <h2 className="text-base ">Download now and transform your space!</h2>
           <div className="flex justify-center">
             <InteractiveHoverButton className="my-10">

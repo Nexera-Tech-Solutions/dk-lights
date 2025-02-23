@@ -1,31 +1,34 @@
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
+import CatalogDownload from "./native-components/CatalogDownload/CatalogDownload";
+import Footer from "./native-components/Footer/Footer";
 
 export default function Home() {
-    return (
-        <div>
-            {/* Header in layout */}
-            {/* Hero Section */}
+  return (
+    <div>
+      {/* Header in layout */}
+      {/* Hero Section */}
 
+      {/* Product Category */}
 
-            {/* Product Category */}
+      <section id="best-sellers">
+        <BestSellingProducts />
+      </section>
 
+      {/* Testimonials */}
 
-            {/* Best Sellers */}
-            <BestSellingProducts />
+      {/* Download Catalogue */}
+      <section id="download-catalogue">
+        <CatalogDownload />
+      </section>
 
-            {/* Testimonials */}
+      {/* About US */}
 
+      {/* Contact Form */}
 
-            {/* Download Catalogue */}
-
-
-            {/* About US */}
-
-
-            {/* Contact Form */}
-
-
-            {/* Footer in layout */}
-        </div>
-    );
+      {/* Footer in layout */}
+      <section id="footer-section">
+        <Footer />
+      </section>
+    </div>
+  );
 }
