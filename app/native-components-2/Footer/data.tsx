@@ -2,6 +2,7 @@ import FacebookIcon from "../../assets/FooterIcons/Facebook.svg";
 import LinkedinIcon from "../../assets/FooterIcons/Linkedin.svg";
 import YoutubeIcon from "../../assets/FooterIcons/Youtube.svg";
 import InstagramIcon from "../../assets/FooterIcons/Instagram.svg";
+import { Headphones, Package, RefreshCcw, Shield } from "lucide-react";
 
 export interface LinkType {
   text: string;
@@ -19,8 +20,6 @@ interface SocialMediaImagesType {
 export const QuickLinks: LinkType[] = [
   { text: "Home", url: "/", flag: "enable_home_page" },
   { text: "About", url: "/about", flag: "enable_about_page" },
-  { text: "Our Team", url: "/our-team", flag: "enable_our_team_page" },
-  { text: "Gallery", url: "/gallery", flag: "enable_gallery_page" },
   {
     text: "Privacy Policy",
     url: "/privacy-policy",
@@ -39,17 +38,6 @@ export const ProductLinks: LinkType[] = [
     flag: "enable_diverter_mixers_page",
   },
   { text: "Smart Lighting", url: "/faucets", flag: "enable_faucets_page" },
-  { text: "Basin", url: "/basin", flag: "enable_basin_page" },
-  {
-    text: "Architectural Lighting",
-    url: "/water-closet",
-    flag: "enable_water_closet_page",
-  },
-  {
-    text: "Commercial & Industrial Lighting",
-    url: "/wellness",
-    flag: "enable_wellness_page",
-  },
 ];
 
 export const SocialMediaImages: SocialMediaImagesType[] = [
@@ -72,5 +60,28 @@ export const SocialMediaImages: SocialMediaImagesType[] = [
     img: InstagramIcon,
     link: "https://www.instagram.com/thedrivex/",
     alt: "Instagram Icon",
+  },
+];
+
+export const features = [
+  {
+    icon: <RefreshCcw className="w-5 h-5" />,
+    title: "14 days",
+    description: "Full Return Policy",
+  },
+  {
+    icon: <Package className="w-5 h-5" />,
+    title: "Free and Fast",
+    description: "Delivery",
+  },
+  {
+    icon: <Shield className="w-5 h-5" />,
+    title: "100% Safe",
+    description: "Online Shopping",
+  },
+  {
+    icon: <Headphones className="w-5 h-5" />,
+    title: "Helpdesk",
+    description: "0065 0065056",
   },
 ];
