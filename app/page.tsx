@@ -7,7 +7,7 @@ import Testimonials from "./native-components-2/Testimonials/Testimonials";
 
 export default function Home() {
     return (
-        <div>
+        <section id="home-page" className="space-y-20">
             {/* Header in layout */}
 
             {/* Hero Section */}
@@ -38,6 +38,6 @@ export default function Home() {
             <ContactForm />
 
             {/* Footer in layout */}
-        </div>
+        </section>
     );
 }

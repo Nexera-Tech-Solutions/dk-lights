@@ -113,12 +113,14 @@ export function ContactForm() {
                         value={formData.message}
                         onChange={handleChange}
                         required
+                        className="rounded-sm"
                     />
                 </div>
                 <Button
                     type="submit"
                     disabled={formState === "submitting"}
-                    className="w-full"
+                    className="w-full rounded-sm"
+                    size="lg"
                 >
                     {formState === "submitting"
                         ? "Submitting..."

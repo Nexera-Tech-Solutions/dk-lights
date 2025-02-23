@@ -80,7 +80,7 @@ const Footer = () => {
                                                           ? "_blank"
                                                           : ""
                                                   }
-                                                  className="text-black text-xs font-medium"
+                                                  className="text-black text-sm font-medium"
                                               >
                                                   {data.text}
                                               </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
                                                           ? "_blank"
                                                           : ""
                                                   }
-                                                  className="text-black  text-xs font-medium"
+                                                  className="text-black  text-sm font-medium"
                                               >
                                                   {data.text}
                                               </Link>

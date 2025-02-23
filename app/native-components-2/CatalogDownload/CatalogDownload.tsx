@@ -7,14 +7,14 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 const CatalogDownload = () => {
   return (
       <section className="flex justify-center py-10">
-          <motion.div className="bg-white rounded-sm shadow-md p-5 flex items-center justify-between gap-16 max-w-[1000px]">
+          <motion.div className="bg-white rounded-sm shadow-md p-5 flex items-center justify-between gap-16 max-w-[1000px] my-10">
               <div className="flex items-center justify-center flex-1">
                   <Image
                       src="/global/random-image-2.jpg"
                       alt={"icon-img"}
                       width={430}
                       height={430}
-                      className="rounded-sm"
+                      className="rounded-sm shadow-inner"
                   />
               </div>
               <div className="text-center mt-4 flex-1">
