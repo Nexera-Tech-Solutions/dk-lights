@@ -17,7 +17,7 @@ const Testimonials = () => {
                 Don&apos;t believe us? Hear from our Customers
             </h3>
 
-            <div className="grid grid-cols-2 max-w-[800px] mx-auto gap-12 my-10">
+            <div className="grid grid-cols-3 max-w-[1000px] mx-auto gap-12 my-10">
                 {TESTIMONIALS.map((test, index) => (
                     <Card key={index} className="border-none shadow-none">
                         <CardHeader>

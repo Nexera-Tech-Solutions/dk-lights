@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { submitContactForm } from "@/app/actions/contactForm.actions";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 interface FormData {
     name: string;
@@ -63,14 +64,27 @@ export function ContactForm() {
     };
 
     return (
-        <div className="my-10">
+        <div className="my-10 space-y-10">
             <h3 className="w-fit pl-4 mx-auto text-2xl md:text-4xl font-bold text-black">
                 Have some questions? Don&apos;t hesitate to reach out to us
             </h3>
 
+            <Button
+                type="submit"
+                disabled={formState === "submitting"}
+                className="w-md mx-auto rounded-sm bg-green-600 flex flex-row gap-3 text-md font-bold hover:bg-green-500"
+                size="lg"
+            >
+                Message us on Whatsapp <IconBrandWhatsapp />
+            </Button>
+
+            <h3 className="w-fit pl-4 mx-auto text-lg md:text-2xl font-bold text-black">
+                or
+            </h3>
+
             <form
                 onSubmit={handleSubmit}
-                className="space-y-8 max-w-md mx-auto mt-20"
+                className="space-y-8 max-w-md mx-auto mt-10"
             >
                 <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
