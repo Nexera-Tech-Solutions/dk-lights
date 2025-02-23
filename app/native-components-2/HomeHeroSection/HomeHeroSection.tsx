@@ -1,8 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-
 "use client";
-
 import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -13,10 +11,11 @@ import { HeroSectionSlides } from "./data";
 import { IconArrowNarrowRight, IconArrowNarrowLeft } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
 
 const HomeHeroSection = () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,17 +33,17 @@ const HomeHeroSection = () => {
         grabCursor={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        loopedslides={HeroSectionSlides.length}
         slidesPerView={1}
         className="w-full h-full"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        scrollbar={{ draggable: true }}
       >
         {HeroSectionSlides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className="w-full h-full flex items-center justify-center bg-white shadow-xl rounded-sm"
+            className="w-full h-full flex items-center justify-center bg-white shadow-xl rounded-lg rounded-sm"
           >
             {slide.type === "video" ? (
               <video
@@ -78,9 +77,10 @@ const HomeHeroSection = () => {
         ))}
       </Swiper>
 
+      {/* Previous Button */}
       <div
-        className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-gray-950 border-white border-[1px] text-white p-3 rounded-full z-10"
-        transition={{ ease: "easeInOut", duration: 0.3 }}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10 cursor-pointer"
+        style={{ animation: "fadeIn 0.3s ease-in-out" }}
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -88,8 +88,9 @@ const HomeHeroSection = () => {
         </motion.div>
       </div>
 
+      {/* Next Button */}
       <div
-        className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-950 border-white border-[1px] text-white p-3 rounded-full z-10 cursor-pointer"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2  text-white p-3 rounded-full z-10 cursor-pointer bg-gray-950 border-white border-[1px]"
         style={{ animation: "fadeIn 0.3s ease-in-out" }}
         onClick={() => swiperRef.current?.slideNext()}
       >
