@@ -1,50 +1,31 @@
-import CatalogDownload from "./native-components/CatalogDownload/CatalogDownload";
-import ContactForm from "./native-components/ContactForm/ContactForm";
-import FAQs from "./native-components/FAQs/FAQs";
-import FeatureCard from "./native-components/FeatureCard/FeatureCard";
-import HomeHeroSection from "./native-components/HomeHeroSection/HomeHeroSection";
-import InHouseVisit from "./native-components/InHouseVisit.tsx/InHouseVisit";
-import Testimonial from "./native-components/Testimonial/Testimonial";
+import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 
 export default function Home() {
     return (
         <div>
-            {/* Hero section */}
-            <section id="hero-section" className="w-full">
-                <HomeHeroSection />
-            </section>
+            {/* Header in layout */}
+            {/* Hero Section */}
 
 
-            {/* Features section */}
-            <section id="features" className="w-full">
-                <FeatureCard />
-            </section>
+            {/* Product Category */}
 
 
-           {/* Catalogue section */}
-            <section id="features" className="w-full">
-                <CatalogDownload />
-            </section>
+            {/* Best Sellers */}
+            <BestSellingProducts />
 
-            {/* Testimonial Marquee */}
-            <section id="testimaonial-marquee">
-                <Testimonial />
-            </section>
+            {/* Testimonials */}
 
-            {/* In House Section */}
-            <section>
-                <InHouseVisit />
-            </section>
 
-            {/* FAQ Section */}
-            <section id="faqs">
-                <FAQs />
-            </section>
+            {/* Download Catalogue */}
+
+
+            {/* About US */}
+
 
             {/* Contact Form */}
-            <section>
-                <ContactForm />
-            </section>
+
+
+            {/* Footer in layout */}
         </div>
     );
 }

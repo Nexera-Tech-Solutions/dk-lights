@@ -12,8 +12,7 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { NAVLINKS, PRODUCT_CATEGORIES } from "./data";
-import ThemeToggle from "@/components/comp-182";
+import { PRODUCT_CATEGORIES } from "./data";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
@@ -21,45 +20,47 @@ const Header = () => {
     const [imageOnHeader, setImageOnHeader] = useState<string>("");
 
     return (
-        <div className="w-full  shadow-sm">
-            <header className="hidden md:flex max-w-[1000px] mx-auto py-3 flex-row justify-between items-center">
-                <Link href="/">
-                    <Image
-                        src="/global/logo.jpeg"
-                        alt="logo"
-                        width={50}
-                        height={50}
-                        className="rounded-full aspect-square object-cover"
-                    />
-                </Link>
-
-                <NavigationMenu className="ml-auto mr-5">
+        <div className="w-full">
+            <header className="hidden md:flex max-w-[980px] mx-auto pt-3 flex-row justify-between items-center">
+                <NavigationMenu>
                     <NavigationMenuList>
-                        {NAVLINKS.map((navlink, index) => (
-                            <NavigationMenuItem key={index}>
-                                <Link
-                                    href={navlink.href}
-                                    legacyBehavior
-                                    passHref
-                                >
-                                    <NavigationMenuLink
-                                        className={navigationMenuTriggerStyle()}
-                                    >
-                                        <span className="font-bold">
-                                            {navlink.label}
-                                        </span>
-                                    </NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem>
-                        ))}
+                        <NavigationMenuItem>
+                            <NavigationMenuLink
+                                href="/"
+                                className="font-semibold"
+                            >
+                                Home
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <ThemeToggle />
+                <Link href="/">
+                    <h3 className="text-lg font-bold">DK LIGHTS</h3>
+                </Link>
+
+                <NavigationMenu>
+                    <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink
+                                href="/contact"
+                                className="font-semibold"
+                            >
+                                Contact
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu>
             </header>
 
-            <header className="hidden lg:block w-full mx-auto py-2 dark bg-black">
-                <NavigationMenu className="mx-auto max-w-[1000px] text-white">
+            <div className="max-w-[1100px] flex flex-row gap-3 px-3 mx-auto items-center">
+                <hr className="h-[1px] bg-black flex-1" />
+                X
+                <hr className="h-[1px] bg-black flex-1" />
+            </div>
+
+            <header className="hidden lg:block w-full mx-auto py-2">
+                <NavigationMenu className="mx-auto max-w-[1000px]">
                     <NavigationMenuList>
                         {PRODUCT_CATEGORIES.map((category, index) => (
                             <NavigationMenuItem key={index}>
