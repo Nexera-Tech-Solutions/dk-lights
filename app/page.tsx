@@ -3,7 +3,7 @@ import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownlo
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
 import Testimonials from "./native-components-2/Testimonials/Testimonials";
-import FAQs from "./native-components/FAQs/FAQs";
+import { ContactForm } from "./native-components-2/ContactForm/ContactForm";
 import FeatureCard from "./native-components/FeatureCard/FeatureCard";
 
 export default function Home() {
@@ -23,19 +23,19 @@ export default function Home() {
         <BestSellingProducts />
       </section>
 
-      {/* Features section */}
-      <section id="features" className="w-full">
-        <FeatureCard />
-      </section>
-
-      {/* Testimonial Marquee */}
-      <section id="testimaonial-marquee">
+      {/* Testimonials */}
+      <section id="footer-section">
         <Testimonials />
       </section>
 
       {/* Download Catalogue */}
       <section id="download-catalogue">
         <CatalogDownload />
+      </section>
+
+      {/* Contact Form */}
+      <section id="contact-form">
+        <ContactForm />
       </section>
     </div>
   );

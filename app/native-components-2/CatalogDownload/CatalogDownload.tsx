@@ -40,7 +40,7 @@ const CatalogDownload = () => {
               Download now and transform your space!
             </h2>
             <div className="flex justify-center">
-              <InteractiveHoverButton className="my-10">
+              <InteractiveHoverButton className="my-10 rounded-sm">
                 Download Catalog
               </InteractiveHoverButton>
             </div>
