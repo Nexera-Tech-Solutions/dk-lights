@@ -2,8 +2,9 @@
 import type { Metadata } from "next";
 import { Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
-import Header from "./native-components/Header/Header";
-import { PointerWrapper } from "@/components/magicui/pointer";
+import Header from "./native-components-2/Header/Header";
+import { Toaster } from "@/components/ui/sonner";
+import Footer from "./native-components-2/Footer/Footer";
 
 const shipporiMincho = Shippori_Mincho_B1({
     subsets: ["latin"],
@@ -25,6 +26,8 @@ export default function RootLayout({
             <body className={`${shipporiMincho.className} antialiased`}>
                 <Header />
                 {children}
+                <Footer />
+                <Toaster className="dark" />
             </body>
         </html>
     );

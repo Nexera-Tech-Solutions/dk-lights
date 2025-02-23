@@ -1,21 +1,20 @@
-import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
-import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
-import Footer from "./native-components-2/Footer/Footer";
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
+import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
+import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
+import Testimonials from "./native-components-2/Testimonials/Testimonials";
+import FAQs from "./native-components/FAQs/FAQs";
+import FeatureCard from "./native-components/FeatureCard/FeatureCard";
 
 export default function Home() {
   return (
     <div>
-      {/* Header in layout */}
-
-      {/* Hero Section */}
+      {/* Hero section */}
       <section id="hero-section" className="w-full">
         <HomeHeroSection />
       </section>
 
       {/* Product Category */}
-
       <section id="product-category" className="w-full">
         <ProductCategoryCardSection />
       </section>
@@ -24,20 +23,19 @@ export default function Home() {
         <BestSellingProducts />
       </section>
 
-      {/* Testimonials */}
+      {/* Features section */}
+      <section id="features" className="w-full">
+        <FeatureCard />
+      </section>
+
+      {/* Testimonial Marquee */}
+      <section id="testimaonial-marquee">
+        <Testimonials />
+      </section>
 
       {/* Download Catalogue */}
       <section id="download-catalogue">
         <CatalogDownload />
-      </section>
-
-      {/* About US */}
-
-      {/* Contact Form */}
-
-      {/* Footer in layout */}
-      <section id="footer-section">
-        <Footer />
       </section>
     </div>
   );

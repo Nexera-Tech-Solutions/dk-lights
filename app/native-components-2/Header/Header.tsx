@@ -9,7 +9,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { PRODUCT_CATEGORIES } from "./data";
@@ -26,10 +25,10 @@ const Header = () => {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuLink
-                                href="/"
+                                href="/about"
                                 className="font-semibold"
                             >
-                                Home
+                                About
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
@@ -53,9 +52,9 @@ const Header = () => {
                 </NavigationMenu>
             </header>
 
-            <div className="max-w-[1100px] flex flex-row gap-3 px-3 mx-auto items-center">
+            <div className="max-w-[1040px] flex flex-row gap-3 px-3 mx-auto items-center">
                 <hr className="h-[1px] bg-black flex-1" />
-                X
+                x
                 <hr className="h-[1px] bg-black flex-1" />
             </div>
 

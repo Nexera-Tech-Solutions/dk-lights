@@ -169,7 +169,7 @@ export const Card = ({
 }) => {
     const [open, setOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-    const { onCardClose, currentIndex } = useContext(CarouselContext);
+    const { onCardClose } = useContext(CarouselContext);
 
     const router = useRouter();
 
@@ -188,15 +188,11 @@ export const Card = ({
 
         window.addEventListener("keydown", onKeyDown);
         return () => window.removeEventListener("keydown", onKeyDown);
-    }, [open]);
+    });
 
     useOutsideClick(containerRef as React.RefObject<HTMLDivElement>, () =>
         handleClose()
     );
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
 
     const handleClose = () => {
         setOpen(false);
