@@ -10,9 +10,10 @@ import { HeroSectionSlides } from "./data";
 import { IconArrowNarrowRight, IconArrowNarrowLeft } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { Swiper as SwiperType } from "swiper";
 
 const HomeHeroSection = () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,12 +31,12 @@ const HomeHeroSection = () => {
         grabCursor={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        loopedslides={HeroSectionSlides.length}
         slidesPerView={1}
         className="w-full h-full"
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        scrollbar={{ draggable: true }}
       >
         {HeroSectionSlides.map((slide, index) => (
           <SwiperSlide
@@ -72,8 +73,9 @@ const HomeHeroSection = () => {
         ))}
       </Swiper>
 
+      {/* Previous Button */}
       <div
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10 cursor-pointer"
         style={{ animation: "fadeIn 0.3s ease-in-out" }}
         onClick={() => swiperRef.current?.slidePrev()}
       >
@@ -82,6 +84,7 @@ const HomeHeroSection = () => {
         </motion.div>
       </div>
 
+      {/* Next Button */}
       <div
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10 cursor-pointer"
         style={{ animation: "fadeIn 0.3s ease-in-out" }}

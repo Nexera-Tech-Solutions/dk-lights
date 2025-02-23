@@ -6,10 +6,10 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 import useTextAnnotation from "@/app/hooks/useTextAnnotation";
 
 const CatalogDownload = () => {
-  useTextAnnotation("catalog-text"); // Apply animation to this text
+  useTextAnnotation("catalog-text");
 
   return (
-    <section className="flex flex-col justify-center items-center py-10">
+    <section className="flex flex-col justify-center items-center pb-10">
       <h2 className="w-fit pl-4 mx-auto text-2xl md:text-4xl font-bold text-black my-5">
         Download
         <span id="catalog-text" className="mx-5">
