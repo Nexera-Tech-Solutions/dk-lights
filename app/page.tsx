@@ -1,12 +1,17 @@
-import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
+import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
 import Footer from "./native-components-2/Footer/Footer";
+import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 
 export default function Home() {
   return (
     <div>
       {/* Header in layout */}
       {/* Hero Section */}
+
+      <section id="hero-section" className="w-full">
+        <HomeHeroSection />
+      </section>
 
       {/* Product Category */}
 
