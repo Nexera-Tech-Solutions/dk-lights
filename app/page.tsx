@@ -1,6 +1,6 @@
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
-import CatalogDownload from "./native-components/CatalogDownload/CatalogDownload";
-import Footer from "./native-components/Footer/Footer";
+import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
+import Footer from "./native-components-2/Footer/Footer";
 
 export default function Home() {
   return (
