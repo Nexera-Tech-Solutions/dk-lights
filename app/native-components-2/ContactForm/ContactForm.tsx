@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -66,7 +65,7 @@ export function ContactForm() {
     return (
         <div className="my-10">
             <h3 className="w-fit pl-4 mx-auto text-2xl md:text-4xl font-bold text-black">
-                Have some questions? Don't hesitate to reach out to us
+                Have some questions? Don&apos;t hesitate to reach out to us
             </h3>
 
             <form
@@ -134,7 +133,7 @@ export function ContactForm() {
                 )}
                 {formState === "success" && (
                     <p className="text-green-500">
-                        Thank you for your message. We'll be in touch soon!
+                        Thank you for your message. We&apos;ll be in touch soon!
                     </p>
                 )}
             </form>

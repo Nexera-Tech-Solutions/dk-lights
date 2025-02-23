@@ -3,7 +3,7 @@ import { features } from "./data";
 
 const InfoBar = () => {
   return (
-    <div className="w-full bg-gray-50 p-3 ">
+    <div className="w-full bg-gray-50 p-2">
       <div className="max-w-[1100px] mx-auto px-4 py-2">
         <div className="flex flex-wrap justify-between items-center gap-4">
           {features.map((feature, index) => (

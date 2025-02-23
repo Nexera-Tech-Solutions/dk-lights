@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const range = (init: number, fin?: number, step: number = 1) => {
-    let arr = [];
+    const arr = [];
 
     if (!fin) {
         fin = init;

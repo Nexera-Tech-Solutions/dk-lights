@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
-import Header from "./native-components/Header/Header";
+import Header from "./native-components-2/Header/Header";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./native-components-2/Footer/Footer";
 

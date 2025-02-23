@@ -1,7 +1,6 @@
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
 import { ContactForm } from "./native-components-2/ContactForm/ContactForm";
-import Footer from "./native-components-2/Footer/Footer";
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 import Testimonials from "./native-components-2/Testimonials/Testimonials";
 

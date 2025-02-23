@@ -1,6 +1,5 @@
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
@@ -15,7 +14,7 @@ const Testimonials = () => {
     return (
         <div>
             <h3 className="w-fit pl-4 mx-auto text-2xl md:text-4xl font-bold text-black">
-                Don't Believe us? Hear from our Customers
+                Don&apos;t believe us? Hear from our Customers
             </h3>
 
             <div className="grid grid-cols-2 max-w-[800px] mx-auto gap-12 my-10">
@@ -27,10 +26,10 @@ const Testimonials = () => {
                         </CardHeader>
                         <CardFooter>
                             {range(test.stars).map((val) => (
-                                <Star size={24} fill="black" />
+                                <Star size={24} fill="black" key={val}/>
                             ))}
                             {range(5 - test.stars).map((val) => (
-                                <Star size={24} />
+                                <Star size={24} key={val}/>
                             ))}
                         </CardFooter>
                     </Card>
