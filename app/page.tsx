@@ -1,5 +1,6 @@
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
+import { ContactForm } from "./native-components-2/ContactForm/ContactForm";
 import Footer from "./native-components-2/Footer/Footer";
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 import Testimonials from "./native-components-2/Testimonials/Testimonials";
@@ -9,13 +10,14 @@ export default function Home() {
         <div>
             {/* Header in layout */}
 
-            {/* Product Category */}
+            {/* Hero Section */}
             <section id="hero-section" className="w-full">
                 <HomeHeroSection />
             </section>
 
-            {/* Hero Section */}
+            {/* Product Category */}
 
+            {/* Best Selling Products */}
             <section id="best-sellers">
                 <BestSellingProducts />
             </section>
@@ -33,11 +35,9 @@ export default function Home() {
             {/* About US */}
 
             {/* Contact Form */}
+            <ContactForm />
 
             {/* Footer in layout */}
-            <section id="footer-section">
-                <Footer />
-            </section>
         </div>
     );
 }

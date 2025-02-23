@@ -26,10 +26,10 @@ const Header = () => {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuLink
-                                href="/"
+                                href="/about"
                                 className="font-semibold"
                             >
-                                Home
+                                About
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>

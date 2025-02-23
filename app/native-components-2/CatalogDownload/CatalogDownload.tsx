@@ -6,36 +6,36 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 
 const CatalogDownload = () => {
   return (
-    <section className="flex justify-center py-10">
-      <motion.div
-        className="bg-white rounded-lg shadow-xl p-10 flex items-center justify-between gap-16 "
-        whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.3, ease: "easeOut" },
-        }}
-      >
-        <div className="flex items-center justify-center">
-          <Image
-            src="/global/random-image-2.jpg"
-            alt={"icon-img"}
-            width={430}
-            height={430}
-          />
-        </div>
-        <div className="text-center mt-4">
-          <h2 className="text-3xl font-bold pb-2">
-            Discover the Latest Trends
-          </h2>
-          <h2 className="text-base ">Download now and transform your space!</h2>
-          <div className="flex justify-center">
-            <InteractiveHoverButton className="my-10">
-              {" "}
-              Download Catalog
-            </InteractiveHoverButton>
-          </div>
-        </div>
-      </motion.div>
-    </section>
+      <section className="flex justify-center py-10">
+          <motion.div className="bg-white rounded-sm shadow-md p-5 flex items-center justify-between gap-16 max-w-[1000px]">
+              <div className="flex items-center justify-center flex-1">
+                  <Image
+                      src="/global/random-image-2.jpg"
+                      alt={"icon-img"}
+                      width={430}
+                      height={430}
+                      className="rounded-sm"
+                  />
+              </div>
+              <div className="text-center mt-4 flex-1">
+                  <h2 className="text-3xl font-bold pb-2">
+                      Discover the Latest Trends
+                  </h2>
+                  <h2 className="text-base ">
+                      Explore our complete range of premium lighting solutions
+                      in one place. Download our latest catalogue to discover
+                      innovative designs, energy-efficient technology, and
+                      custom lighting options tailored for your space.
+                  </h2>
+                  <div className="flex justify-center">
+                      <InteractiveHoverButton className="my-10 rounded-sm">
+                          {" "}
+                          Download Catalog
+                      </InteractiveHoverButton>
+                  </div>
+              </div>
+          </motion.div>
+      </section>
   );
 };
 
