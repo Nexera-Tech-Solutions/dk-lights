@@ -2,52 +2,34 @@
 
 import { z } from "zod";
 
-const contactFormSchema = z.object({
-    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-    email: z.string().email({ message: "Invalid email address." }),
-    mobileNumber: z.string().regex(/^\d{10}$/, {
-        message: "Invalid mobile number. Must be exactly 10 digits.",
-    }),
-    query: z
+const schema = z.object({
+    name: z.string().min(1, { message: "Name is required" }),
+    email: z.string().email({ message: "Invalid email address" }),
+    phone: z
         .string()
-        .min(10, { message: "Query must be at least 10 characters." }),
+        .min(10, { message: "Phone number must be at least 10 digits" }),
+    message: z
+        .string()
+        .min(10, { message: "Message must be at least 10 characters long" }),
 });
 
-export async function submitContactForm(
-    prevState: { errors: Record<string, string[]>; message?: string },
-    formData: FormData
-) {
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const mobileNumber = formData.get("mobileNumber") as string;
-    const query = formData.get("query") as string;
-
-    const validatedFields = contactFormSchema.safeParse({
-        name,
-        email,
-        mobileNumber,
-        query,
+export async function submitContactForm(formData: FormData) {
+    const validatedFields = schema.safeParse({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        message: formData.get("message"),
     });
 
     if (!validatedFields.success) {
         return {
-            errors: validatedFields.error.flatten().fieldErrors,
-            values: { name, email, mobileNumber, query },
+            error: "There was an error submitting the form. Please try again.",
         };
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Here you would typically send an email, save to a database, etc.
+    // For this example, we'll just log the data
+    console.log(validatedFields.data);
 
-    // Here you would typically save the data to a database
-    // For now we'll just return a success message
-    return {
-        message: "Thank you for your message. We will get back to you soon!",
-        errors: {
-            name: undefined,
-            email: undefined,
-            mobileNumber: undefined,
-            query: undefined,
-        },
-        values: {},
-    };
+    return { success: "Thank you for your message. We'll be in touch soon!" };
 }
