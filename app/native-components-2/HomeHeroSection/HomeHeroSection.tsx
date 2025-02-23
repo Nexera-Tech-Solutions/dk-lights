@@ -55,7 +55,7 @@ const HomeHeroSection = () => {
             ) : (
               <div className="relative w-full h-full flex flex-col items-center justify-center">
                 <img
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg brightness-50"
                   src={slide.src}
                   alt={`Slide ${index + 1}`}
                 />
