@@ -30,8 +30,12 @@ const HomeHeroSection = () => {
         grabCursor={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
+        loopedSlides={HeroSectionSlides.length}
         slidesPerView={1}
         className="w-full h-full"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
         {HeroSectionSlides.map((slide, index) => (
           <SwiperSlide
@@ -69,8 +73,8 @@ const HomeHeroSection = () => {
       </Swiper>
 
       <div
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10 cursor-pointer"
-        style={{ animation: "fadeIn 0.3s ease-in-out" }}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-3 rounded-full z-10"
+        transition={{ ease: "easeInOut", duration: 0.3 }}
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
