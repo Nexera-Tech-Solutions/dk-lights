@@ -19,15 +19,11 @@ const ProductCategoryCardSection = () => {
       </h2>
 
       <div className="relative z-10 h-full w-full">
-        <div className="flex flex-wrap justify-center gap-4 p-4">
+        <div className="grid grid-cols-3 gap-6 p-4 max-w-[1000px] mx-auto">
           {productCategory.map((item, index) => (
             <motion.div
               key={index}
-              className="cursor-pointer flex flex-col items-center justify-center whitespace-nowrap text-2xl relative p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-[300px] h-[250px]"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-              }}
+              className="cursor-pointer flex flex-col items-center justify-center whitespace-nowrap text-2xl relative p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg w-[300px] h-[250px] shadow-md"
             >
               <div className="relative h-[100px] w-[100px] overflow-hidden">
                 <Image

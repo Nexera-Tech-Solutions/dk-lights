@@ -4,7 +4,6 @@ import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSecti
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
 import Testimonials from "./native-components-2/Testimonials/Testimonials";
 import { ContactForm } from "./native-components-2/ContactForm/ContactForm";
-import FeatureCard from "./native-components/FeatureCard/FeatureCard";
 
 export default function Home() {
   return (

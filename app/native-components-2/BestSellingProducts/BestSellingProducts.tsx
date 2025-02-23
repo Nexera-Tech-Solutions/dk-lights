@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { BEST_SELLERS } from "./data";
 import useTextAnnotation from "@/app/hooks/useTextAnnotation";
