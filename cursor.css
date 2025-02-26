@@ -1,0 +1,62 @@
+/* styles/cursor.css */
+.cursor {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.cursor-blur {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(50px);
+  z-index: 9;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 998;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+}
+
+/* Interactive elements hover effect */
+.interactive-element {
+  cursor: none;
+}
+
+/* Add this to your global styles or modify as needed */
+html, body {
+  cursor: none;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cursor, .cursor-blur, .cursor-trail {
+    display: none;
+  }
+  
+  html, body {
+    cursor: auto;
+  }
+}
