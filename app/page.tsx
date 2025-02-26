@@ -11,6 +11,7 @@ import SplashScreen from "./native-components-2/SplashScreen/SplashScreen";
 
 import "../cursor.css"; // Import the cursor styles
 import CursorAnimation from "./native-components-2/CursorAnimation/CursorAnimation";
+import VideoTextPreview from "./native-components-2/VideoTextEffect/VideoTextPreview";
 
 export default function Home() {
   const [show, setShow] = useState(true);
@@ -45,6 +46,10 @@ export default function Home() {
       {/* Testimonials */}
       <section id="footer-section">
         <Testimonials />
+      </section>
+
+      <section id="footer-section">
+        <VideoTextPreview />
       </section>
 
       {/* Download Catalogue */}
