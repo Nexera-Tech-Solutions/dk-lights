@@ -110,20 +110,20 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     <div
                         className={cn(
                             "flex flex-row justify-start gap-4 pl-4",
-                            "max-w-6xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
+                            "mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
                         )}
                     >
                         {items.map((item, index) => (
                             <motion.div
                                 initial={{
                                     opacity: 0,
-                                    y: 20,
+                                    y: 30,
                                 }}
-                                animate={{
+                                whileInView={{
                                     opacity: 1,
                                     y: 0,
                                     transition: {
-                                        duration: 0.5,
+                                        duration: 1,
                                         delay: 0.2 * index,
                                         ease: "easeOut",
                                         once: true,
@@ -139,14 +139,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 </div>
                 <div className="flex justify-center gap-4 mr-10">
                     <button
-                        className="relative z-40 h-14 w-14 rounded-sm bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-14 w-14 rounded-sm bg-background border-[2px] border-orange-900 flex items-center justify-center disabled:opacity-50"
                         onClick={scrollLeft}
                         disabled={!canScrollLeft}
                     >
                         <IconArrowNarrowLeft className="h-6 w-6 text-black" />
                     </button>
                     <button
-                        className="relative z-40 h-14 w-14 rounded-sm bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        className="relative z-40 h-14 w-14 rounded-sm bg-background border-[2px] border-orange-900 flex items-center justify-center disabled:opacity-50"
                         onClick={scrollRight}
                         disabled={!canScrollRight}
                     >
@@ -216,9 +216,9 @@ export const Card = ({
                             exit={{ opacity: 0 }}
                             ref={containerRef}
                             layoutId={layout ? `card-${card.title}` : undefined}
-                            className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+                            className="max-w-5xl mx-auto bg-[#EDEBE9] dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
                         >
-                            <button className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center">
+                            <button className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-[#EDEBE9] rounded-full flex items-center justify-center">
                                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
                             </button>
                             <motion.p
@@ -227,7 +227,7 @@ export const Card = ({
                                         ? `category-${card.title}`
                                         : undefined
                                 }
-                                className="text-base font-medium text-black dark:text-white"
+                                className="text-base font-medium text-black dark:text-[#EDEBE9]"
                             >
                                 {card.category}
                             </motion.p>
@@ -235,7 +235,7 @@ export const Card = ({
                                 layoutId={
                                     layout ? `title-${card.title}` : undefined
                                 }
-                                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+                                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-[#EDEBE9]"
                             >
                                 {card.title}
                             </motion.p>
@@ -255,13 +255,13 @@ export const Card = ({
                         layoutId={
                             layout ? `category-${card.category}` : undefined
                         }
-                        className="text-white text-sm md:text-base font-medium font-sans text-left"
+                        className="text-[#EDEBE9] text-sm md:text-base font-medium font-sans text-left"
                     >
                         {card.category}
                     </motion.p>
                     <motion.p
                         layoutId={layout ? `title-${card.title}` : undefined}
-                        className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+                        className="text-[#EDEBE9] text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
                     >
                         {card.title}
                     </motion.p>

@@ -10,18 +10,17 @@ import InfoBar from "./InforBar";
 
 const Footer = () => {
   return (
-      <section className="mt-[100px]">
+      <section className="mt-52">
           <InfoBar />
           <footer className="p-4 py-8 max-w-7xl mx-auto w-full">
               <div className="flex flex-col lg:flex-row gap-12 justify-between px-10">
                   <div className="flex flex-col gap-6">
                       <div className="flex justify-between items-center flex-wrap md:justify-start md:gap-20">
                           <Image
-                              src="/global/logo.jpeg"
+                              src="/global/Logog.png"
                               alt="logo"
-                              width={50}
+                              width={200}
                               height={50}
-                              className="rounded-full"
                           />
                       </div>
 

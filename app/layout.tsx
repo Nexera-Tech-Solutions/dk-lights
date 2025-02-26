@@ -1,12 +1,12 @@
 /* commit to start dev deployment */
 import type { Metadata } from "next";
-import { Shippori_Mincho_B1 } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./native-components-2/Header/Header";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./native-components-2/Footer/Footer";
 
-const shipporiMincho = Shippori_Mincho_B1({
+const ibmPlexSans = IBM_Plex_Sans({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
 });
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${shipporiMincho.className} antialiased`}>
+            <body className={`${ibmPlexSans.className} antialiased bg-[#EDEBE9]`}>
                 <Header />
                 {children}
                 <Footer />

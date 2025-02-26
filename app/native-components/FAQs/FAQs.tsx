@@ -24,27 +24,31 @@ const FAQs = ({
   };
 
   return (
-    <section className="flex flex-col max-w-[60rem] mx-auto w-full gap-y-4 bg-white py-10">
-      <h2 className="text-neutral900 text-[1.4rem] text-center">
-        Frequently asked <span className="text-primaryA2">questions</span>
-      </h2>
-      <div className="p-1">
-        <Accordion type="single" collapsible>
-          {content.map((faq, index) => (
-            <AccordionItem key={index} value={`faq-${index}`}>
-              <AccordionTrigger
-                onClick={() => handleToggle(`faq-${index}`, faq.heading)}
-              >
-                {faq.heading}
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-neutral300">{faq.description}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
+      <section className="flex flex-col max-w-[60rem] mx-auto w-full gap-y-4 bg-[#EDEBE9] py-10">
+          <h2 className="text-neutral900 text-[1.4rem] text-center">
+              Frequently asked <span className="text-primaryA2">questions</span>
+          </h2>
+          <div className="p-1">
+              <Accordion type="single" collapsible>
+                  {content.map((faq, index) => (
+                      <AccordionItem key={index} value={`faq-${index}`}>
+                          <AccordionTrigger
+                              onClick={() =>
+                                  handleToggle(`faq-${index}`, faq.heading)
+                              }
+                          >
+                              {faq.heading}
+                          </AccordionTrigger>
+                          <AccordionContent>
+                              <p className="text-neutral300">
+                                  {faq.description}
+                              </p>
+                          </AccordionContent>
+                      </AccordionItem>
+                  ))}
+              </Accordion>
+          </div>
+      </section>
   );
 };
 

@@ -62,47 +62,47 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const { src, title } = slide;
 
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
-      <li
-        ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[100vmin] h-[70vmin] z-10 "
-        onClick={() => handleSlideClick(index)}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={{
-          transform:
-            current !== index
-              ? "scale(0.98) rotateX(8deg)"
-              : "scale(1) rotateX(0deg)",
-          transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-          transformOrigin: "bottom",
-        }}
-      >
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
-          style={{
-            transform:
-              current === index
-                ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
-                : "none",
-          }}
-        >
-          <img
-            className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
-            style={{
-              opacity: current === index ? 1 : 0.5,
-            }}
-            alt={title}
-            src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
-          />
-          {current === index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
-          )}
-          {/* commented for future use */}
-          {/* <article
+      <div className="[perspective:1200px] [transform-style:preserve-3d]">
+          <li
+              ref={slideRef}
+              className="flex flex-1 flex-col items-center justify-center relative text-center text-[#EDEBE9] opacity-100 transition-all duration-300 ease-in-out w-[100vmin] h-[70vmin] z-10 "
+              onClick={() => handleSlideClick(index)}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                  transform:
+                      current !== index
+                          ? "scale(0.98) rotateX(8deg)"
+                          : "scale(1) rotateX(0deg)",
+                  transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                  transformOrigin: "bottom",
+              }}
+          >
+              <div
+                  className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+                  style={{
+                      transform:
+                          current === index
+                              ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
+                              : "none",
+                  }}
+              >
+                  <img
+                      className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+                      style={{
+                          opacity: current === index ? 1 : 0.5,
+                      }}
+                      alt={title}
+                      src={src}
+                      onLoad={imageLoaded}
+                      loading="eager"
+                      decoding="sync"
+                  />
+                  {current === index && (
+                      <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+                  )}
+                  {/* commented for future use */}
+                  {/* <article
             className={`relative p-[5vmin] px-[20%] transition-opacity duration-1000 ease-in-out flex justify-center items-center flex-col flex-start ${
               current === index
                 ? "opacity-100 visible px-32"
@@ -116,9 +116,9 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               <InteractiveHoverButton>{button}</InteractiveHoverButton>
             </div>
           </article> */}
-        </div>
-      </li>
-    </div>
+              </div>
+          </li>
+      </div>
   );
 };
 

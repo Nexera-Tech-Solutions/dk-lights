@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { submitContactForm } from "@/app/actions/contactForm.actions";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 interface FormData {
     name: string;
@@ -64,15 +65,21 @@ export function ContactForm() {
     };
 
     return (
-        <div className="my-10 space-y-10">
-            <h3 className="w-fit pl-4 mx-auto text-2xl md:text-4xl font-bold text-black">
-                Have some questions? Don&apos;t hesitate to reach out to us
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.4 }}
+            className="space-y-10 min-w-[500px]"
+        >
+            <h3 className="w-fit pl-4 mx-auto text-xl md:text-2xl font-bold text-black my-5">
+                Reach out to us
             </h3>
 
             <Button
                 type="submit"
                 disabled={formState === "submitting"}
-                className="w-md mx-auto rounded-sm bg-green-600 flex flex-row gap-3 text-md font-bold hover:bg-green-500"
+                className="w-full max-w-md  mx-auto rounded-sm bg-green-600 flex flex-row gap-3 text-md font-bold hover:bg-green-700 transition-all"
                 size="lg"
             >
                 Message us on Whatsapp <IconBrandWhatsapp />
@@ -151,6 +158,6 @@ export function ContactForm() {
                     </p>
                 )}
             </form>
-        </div>
+        </motion.div>
     );
 }

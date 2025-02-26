@@ -131,7 +131,7 @@ function Pointer({ x, y }: PointerProps): JSX.Element {
                 fill="currentColor"
                 strokeWidth="1"
                 viewBox="0 0 16 16"
-                className="h-6 w-6 translate-x-[-12px] translate-y-[-10px] rotate-[-70deg] stroke-white text-black"
+                className="h-6 w-6 translate-x-[-12px] translate-y-[-10px] rotate-[-70deg] stroke-[#EDEBE9] text-black"
                 height="1em"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"

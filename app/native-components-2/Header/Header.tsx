@@ -14,15 +14,41 @@ import Link from "next/link";
 import { PRODUCT_CATEGORIES } from "./data";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Header = () => {
     const [imageOnHeader, setImageOnHeader] = useState<string>("");
 
     return (
-        <div className="w-full">
-            <header className="hidden md:flex max-w-[980px] mx-auto pt-3 flex-row justify-between items-center">
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.4 }}
+            className="w-full"
+        >
+            <header className="hidden md:flex max-w-[1000px] mx-auto pt-3 flex-row justify-between items-center">
+                <Link href="/">
+                    <h3 className="text-2xl font-bold">
+                        <Image
+                            src="/global/Logog.png"
+                            alt="Logo"
+                            width={140}
+                            height={50}
+                        />
+                    </h3>
+                </Link>
+
                 <NavigationMenu>
                     <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink
+                                href="/contact"
+                                className="font-semibold mr-8"
+                            >
+                                Contact
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink
                                 href="/about"
@@ -33,30 +59,7 @@ const Header = () => {
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
-
-                <Link href="/">
-                    <h3 className="text-lg font-bold">DK LIGHTS</h3>
-                </Link>
-
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <NavigationMenuLink
-                                href="/contact"
-                                className="font-semibold"
-                            >
-                                Contact
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
             </header>
-
-            <div className="max-w-[1040px] flex flex-row gap-3 px-3 mx-auto items-center">
-                <hr className="h-[1px] bg-black flex-1" />
-                x
-                <hr className="h-[1px] bg-black flex-1" />
-            </div>
 
             <header className="hidden lg:block w-full mx-auto py-2">
                 <NavigationMenu className="mx-auto max-w-[1000px]">
@@ -105,7 +108,7 @@ const Header = () => {
                     </NavigationMenuList>
                 </NavigationMenu>
             </header>
-        </div>
+        </motion.div>
     );
 };
 
