@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { availableClients } from "./data";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
 const ProjectsShowcase = () => {

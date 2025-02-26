@@ -13,6 +13,7 @@ import "../cursor.css"; // Import the cursor styles
 import CursorAnimation from "./native-components-2/CursorAnimation/CursorAnimation";
 import VideoTextPreview from "./native-components-2/VideoTextEffect/VideoTextPreview";
 import ProjectsShowcase from "./native-components-2/ProjectsShowcase/ProjectsShowcase";
+import ScrollToTop from "./native-components-2/ScrollToTop/ScrollToTop";
 
 export default function Home() {
   const [show, setShow] = useState(true);
@@ -29,6 +30,9 @@ export default function Home() {
     <div className="flex flex-col gap-36 text-black">
       {/* Add the CursorAnimation component */}
       {isClient && <CursorAnimation />}
+
+      {/* Add the ScrollToTop component */}
+      {isClient && <ScrollToTop />}
 
       {/* Hero section */}
       <section id="hero-section" className="w-full">

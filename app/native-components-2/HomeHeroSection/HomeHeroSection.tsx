@@ -14,8 +14,6 @@ import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-
 const HomeHeroSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
@@ -111,7 +109,7 @@ const HomeHeroSection = () => {
           whileHover={{ x: 5 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <ArrowRight className="w-6 h-6" />
+          <IconArrowNarrowRight className="w-6 h-6" />
         </motion.div>
       </div>
     </motion.div>

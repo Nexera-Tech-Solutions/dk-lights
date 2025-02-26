@@ -6,6 +6,12 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+interface ProductCategoryItem {
+  name: string;
+  image: string;
+  altImage: string;
+}
+
 const ProductCategoryCardSection = () => {
   return (
     <section className="relative w-full p-1 max-w-[1500px] mx-auto">
@@ -43,7 +49,13 @@ const ProductCategoryCardSection = () => {
   );
 };
 
-const ProductCard = ({ item, index }: { item: any; index: number }) => {
+const ProductCard = ({
+  item,
+  index,
+}: {
+  item: ProductCategoryItem;
+  index: number;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
