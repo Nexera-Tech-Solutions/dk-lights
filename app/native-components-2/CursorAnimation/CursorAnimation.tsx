@@ -6,8 +6,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const CursorAnimation = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [trailPoints, setTrailPoints] = useState([]);
+  const [trailPoints, setTrailPoints] = useState<{ x: number; y: number }[]>(
+    []
+  );
+
   const maxTrailPoints = 5; // Number of trailing dots
 
   useEffect(() => {
@@ -37,7 +39,8 @@ const CursorAnimation = () => {
         if (!document.querySelector(`.cursor-trail-${i}`)) {
           const trail = document.createElement("div");
           trail.classList.add("cursor-trail", `cursor-trail-${i}`);
-          trail.style.opacity = 1 - i / maxTrailPoints;
+          trail.style.opacity = (1 - i / maxTrailPoints).toString();
+
           document.body.appendChild(trail);
         }
       }
@@ -46,13 +49,14 @@ const CursorAnimation = () => {
     setupCursorElements();
 
     // Main cursor reference
-    const cursor = document.querySelector(".cursor");
-    const cursorBlur = document.querySelector(".cursor-blur");
+    const cursor = document.querySelector(".cursor") as HTMLElement | null;
+    const cursorBlur = document.querySelector(
+      ".cursor-blur"
+    ) as HTMLElement | null;
 
     // Track mouse position and update cursor elements
-    const handleMouseMove = (event: any) => {
+    const handleMouseMove = (event: MouseEvent) => {
       const newPosition = { x: event.clientX, y: event.clientY };
-      setMousePosition(newPosition);
 
       // Update trails
       setTrailPoints((prev) => {
@@ -75,12 +79,15 @@ const CursorAnimation = () => {
 
       // Update trail positions
       trailPoints.forEach((point, index) => {
-        const trail = document.querySelector(`.cursor-trail-${index}`);
+        const trail = document.querySelector(
+          `.cursor-trail-${index}`
+        ) as HTMLElement | null;
+
         if (trail && point) {
           trail.style.left = `${point.x}px`;
           trail.style.top = `${point.y}px`;
           // Fade out based on position in trail
-          trail.style.opacity = 0.5 * (1 - index / maxTrailPoints);
+          trail.style.opacity = (0.5 * (1 - index / maxTrailPoints)).toString();
         }
       });
     };
