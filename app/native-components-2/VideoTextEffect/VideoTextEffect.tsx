@@ -10,7 +10,12 @@ const VideoTextOverlay = () => {
       viewport={{ once: true, amount: 0.4 }}
     >
       <div className="relative w-fill h-[70px]">
-        <video className="w-full h-full object-cover" autoPlay loop muted>
+        <video
+          className="w-full h-full object-cover bg-[#EDEBE9]"
+          autoPlay
+          loop
+          muted
+        >
           <source
             src="/global/test-video.mp4"
             type="video/mp4"
