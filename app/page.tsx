@@ -1,11 +1,9 @@
 "use client";
 
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
-import CatalogDownload from "./native-components-2/CatalogDownload/CatalogDownload";
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
 import Testimonials from "./native-components-2/Testimonials/Testimonials";
-import { ContactForm } from "./native-components-2/ContactForm/ContactForm";
 import { useState, useEffect } from "react";
 import SplashScreen from "./native-components-2/SplashScreen/SplashScreen";
 

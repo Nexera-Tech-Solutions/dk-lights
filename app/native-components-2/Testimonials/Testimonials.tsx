@@ -7,19 +7,13 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { TESTIMONIALS } from "./data";
 import { range } from "@/lib/utils";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-    Keyboard,
-    Pagination,
-    Navigation,
-    EffectCards,
-    Autoplay,
-} from "swiper/modules";
+import { Navigation, EffectCards, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
