@@ -40,36 +40,54 @@ const SplashScreen = ({
         <div className="fixed inset-0 bg-black flex flex-col items-center justify-center transition-opacity duration-500 z-50">
             {/* Bulb with glowing effect */}
             <div className="relative mb-8">
-                {/* Bulb base */}
-                <div className="w-6 h-4 mx-auto bg-gray-400 rounded-b-lg"></div>
+                {/* Bulb Socket */}
+                <div className="w-8 h-6 mx-auto bg-gray-300 rounded-b-lg border-t border-gray-400 flex items-center justify-center">
+                    <div className="w-6 h-2 bg-gray-400 rounded-full"></div>
+                </div>
 
-                {/* Bulb glass */}
-                <div className="w-16 h-20 relative">
-                    <div className="absolute inset-0 rounded-t-full bg-yellow-100"></div>
+                {/* Bulb Neck */}
+                <div className="w-6 h-3 mx-auto bg-gray-200 border border-gray-300"></div>
 
-                    {/* Inner light */}
+                {/* Bulb Glass */}
+                <div className="w-20 h-20 relative">
+                    {/* Outer glass */}
+                    <div className="absolute inset-0 rounded-full bg-yellow-50 border border-gray-200"></div>
+
+                    {/* Filament */}
+                    <div className="absolute top-6 left-1/2 -translate-x-1/2 w-8 h-8">
+                        <div className="absolute w-6 h-1 bg-amber-500 rounded-full left-1 top-2"></div>
+                        <div className="absolute w-1 h-6 bg-amber-500 rounded-full left-3 top-0 transform rotate-12"></div>
+                        <div className="absolute w-6 h-1 bg-amber-500 rounded-full left-1 top-4"></div>
+                    </div>
+
+                    {/* Inner light based on progress */}
                     <div
-                        className="absolute inset-0 rounded-t-full bg-yellow-300 opacity-80"
+                        className="absolute inset-0 rounded-full bg-yellow-300 opacity-0 transition-opacity duration-300"
                         style={{
-                            filter: `blur(5px) brightness(${
-                                0.8 + (progress / 100) * 0.7
+                            opacity: progress / 200,
+                            filter: `blur(3px) brightness(${
+                                1 + (progress / 100) * 1.5
                             })`,
-                            animation: "pulse 1.5s infinite ease-in-out",
+                            animation:
+                                progress > 20
+                                    ? "pulse 1.5s infinite ease-in-out"
+                                    : "none",
                         }}
                     ></div>
 
                     {/* Glow effect */}
                     <div
-                        className="absolute inset-0 rounded-t-full"
+                        className="absolute inset-0 rounded-full"
                         style={{
-                            boxShadow: `0 0 40px 20px rgba(255, 224, 130, ${
-                                0.1 + (progress / 100) * 0.6
-                            })`,
+                            boxShadow: `0 0 ${10 + progress / 2}px ${
+                                5 + progress / 4
+                            }px rgba(255, 214, 0, ${(progress / 100) * 0.8})`,
                         }}
                     ></div>
 
                     {/* Highlight reflection */}
-                    <div className="absolute top-4 left-4 w-3 h-6 bg-white opacity-60 rounded-full"></div>
+                    <div className="absolute top-5 left-6 w-2 h-6 bg-white opacity-60 rounded-full transform rotate-25"></div>
+                    <div className="absolute top-8 left-12 w-1 h-4 bg-white opacity-40 rounded-full"></div>
                 </div>
             </div>
 

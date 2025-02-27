@@ -23,18 +23,6 @@ const BestSellingProducts = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h2 className="w-fit pl-4 mx-auto text-3xl md:text-5xl font-bold text-black max-w-[700px] text-center mb-20">
-          We design our products carefully. From the hands of our designers
-          right into yours.
-        </h2>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.4 }}
-      >
         <h2 className="w-fit pl-4 mx-auto text-2xl md:text-5xl font-bold text-black max-w-[700px] text-center pt-20 mb-20">
           Some of our Best Selling Products
         </h2>
