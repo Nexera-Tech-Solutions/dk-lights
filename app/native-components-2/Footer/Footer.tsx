@@ -10,7 +10,7 @@ import InfoBar from "./InforBar";
 
 const Footer = () => {
   return (
-      <section className="mt-52 bg-[#fff3c8] bg-opacity-10">
+      <section className="mt-52 bg-[#fff3c8]">
           <InfoBar />
           <footer className="p-4 py-8 max-w-7xl mx-auto w-full">
               <div className="flex flex-col lg:flex-row gap-12 justify-between px-10">
