@@ -23,7 +23,7 @@ const BestSellingProducts = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.4 }}
       >
-        <h2 className="w-fit pl-4 mx-auto text-2xl md:text-5xl font-bold text-black max-w-[700px] text-center mb-20">
+        <h2 className="w-fit pl-4 mx-auto text-2xl md:text-5xl font-bold text-black max-w-[700px] text-center">
           Some of our Best Selling Products
         </h2>
       </motion.div>
