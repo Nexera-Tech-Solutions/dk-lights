@@ -33,7 +33,7 @@ const VideoTextOverlay = () => {
                     className={`${robotoCondensed.className} absolute inset-0 tracking-tighter flex items-center h-full w-full bg-background justify-center mix-blend-lighten`}
                 >
                     <h2
-                        className="text-[520px] uppercase font-bold text-transparent text-center"
+                        className="text-[200px] md:text-[300px] xl:text-[380px] uppercase font-bold text-transparent text-center"
                         style={{
                             WebkitBackgroundClip: "text",
                             backgroundClip: "text",
