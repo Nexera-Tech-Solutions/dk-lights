@@ -30,7 +30,7 @@ const Header = () => {
       <header className="hidden md:flex max-w-[1000px] mx-auto pt-3 flex-row justify-between items-center">
         <Link href="/">
           <h3 className="text-2xl font-bold">
-            <Image src="/global/Logog.png" alt="Logo" width={140} height={50} />
+            <Image src="/global/logo.png" alt="Logo" width={140} height={50} />
           </h3>
         </Link>
 
