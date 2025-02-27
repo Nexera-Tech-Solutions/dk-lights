@@ -12,6 +12,8 @@ import SplashScreen from "./native-components-2/SplashScreen/SplashScreen";
 import "../cursor.css"; // Import the cursor styles
 import CursorAnimation from "./native-components-2/CursorAnimation/CursorAnimation";
 import VideoTextPreview from "./native-components-2/VideoTextEffect/VideoTextPreview";
+import ProjectsShowcase from "./native-components-2/ProjectsShowcase/ProjectsShowcase";
+import ScrollToTop from "./native-components-2/ScrollToTop/ScrollToTop";
 
 export default function Home() {
   const [show, setShow] = useState(true);
@@ -25,9 +27,12 @@ export default function Home() {
   if (show) return <SplashScreen loading={show} setLoading={setShow} />;
 
   return (
-    <div className="flex flex-col gap-52 text-black">
+    <div className="flex flex-col gap-36 text-black">
       {/* Add the CursorAnimation component */}
       {isClient && <CursorAnimation />}
+
+      {/* Add the ScrollToTop component */}
+      {isClient && <ScrollToTop />}
 
       {/* Hero section */}
       <section id="hero-section" className="w-full">
@@ -39,17 +44,21 @@ export default function Home() {
         <ProductCategoryCardSection />
       </section>
 
+      <section id="video-preview-section">
+        <VideoTextPreview />
+      </section>
+
       <section id="best-sellers">
         <BestSellingProducts />
+      </section>
+
+      <section>
+        <ProjectsShowcase />
       </section>
 
       {/* Testimonials */}
       <section id="footer-section">
         <Testimonials />
-      </section>
-
-      <section id="footer-section">
-        <VideoTextPreview />
       </section>
 
       {/* Download Catalogue */}
