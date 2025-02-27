@@ -68,7 +68,7 @@ const ContactCatalogue = () => {
 
     return (
         <motion.div
-            className="flex flex-row items-center w-fit mx-auto"
+            className="flex flex-row items-center w-fit mx-auto mt-5"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}

@@ -3,7 +3,7 @@
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
-import Testimonials from "./native-components-2/Testimonials/Testimonials";
+// import Testimonials from "./native-components-2/Testimonials/Testimonials";
 import { useState, useEffect } from "react";
 import SplashScreen from "./native-components-2/SplashScreen/SplashScreen";
 
@@ -59,6 +59,24 @@ export default function Home() {
                 <VideoTextPreview />
             </section>
 
+            <section id="best-sellers">
+                <BestSellingProducts />
+            </section>
+
+            <section>
+                <ProjectsShowcase />
+            </section>
+
+            {/* Testimonials */}
+            {/* <section id="footer-section">
+                <Testimonials />
+            </section> */}
+
+            <section id="contact-and-catalogue">
+                {/* Catalogue and Contact Form */}
+                <ContactCatalogue />
+            </section>
+
             <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -69,24 +87,6 @@ export default function Home() {
                 We design our products carefully. From the hands of our
                 designers right into yours.
             </motion.h2>
-
-            <section id="best-sellers">
-                <BestSellingProducts />
-            </section>
-
-            <section>
-                <ProjectsShowcase />
-            </section>
-
-            {/* Testimonials */}
-            <section id="footer-section">
-                <Testimonials />
-            </section>
-
-            <section id="contact-and-catalogue">
-                {/* Catalogue and Contact Form */}
-                <ContactCatalogue />
-            </section>
         </div>
     );
 }

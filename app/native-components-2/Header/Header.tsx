@@ -29,9 +29,7 @@ const Header = () => {
     >
       <header className="hidden md:flex max-w-full mx-auto pt-3 px-10 flex-row justify-between items-center">
         <Link href="/">
-          <h3 className="text-2xl font-bold">
-            <Image src="/global/Logog.png" alt="Logo" width={140} height={50} />
-          </h3>
+            <Image src="/global/C-Core-logo-cropped.svg" alt="Logo" width={140} height={100} className="h-fit" />
         </Link>
 
         <NavigationMenu>
