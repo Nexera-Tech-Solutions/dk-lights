@@ -102,14 +102,6 @@ export default {
   					transform: 'translateY(0)'
   				}
   			},
-  			'marquee-vertical': {
-  				from: {
-  					transform: 'translateY(0)'
-  				},
-  				to: {
-  					transform: 'translateY(calc(-100% - var(--gap)))'
-  				}
-  			}
   		},
   		animation: {
   			marquee: 'marquee var(--duration) infinite linear',
@@ -117,7 +109,6 @@ export default {
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
   			'fade-in-slide': 'fade-in-slide 0.5s ease-out forwards',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		}
   	}
   },
