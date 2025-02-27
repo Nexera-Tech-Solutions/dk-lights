@@ -27,7 +27,7 @@ const Header = () => {
       viewport={{ once: true, amount: 0.4 }}
       className="w-full py-[5px]"
     >
-      <header className="hidden md:flex max-w-[1000px] mx-auto pt-3 flex-row justify-between items-center">
+      <header className="hidden md:flex max-w-full mx-auto pt-3 px-10 flex-row justify-between items-center">
         <Link href="/">
           <h3 className="text-2xl font-bold">
             <Image src="/global/Logog.png" alt="Logo" width={140} height={50} />
@@ -37,19 +37,19 @@ const Header = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/home" className="font-semibold mr-8">
+              <NavigationMenuLink href="/home" className="font-semibold mr-12 text-lg">
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/about" className="font-semibold mr-8">
+              <NavigationMenuLink href="/about" className="font-semibold mr-12 text-lg">
                 About Us
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 href="/contact"
-                className="font-semibold mr-8"
+                className="font-semibold text-lg"
               >
                 Contact
               </NavigationMenuLink>
@@ -64,7 +64,7 @@ const Header = () => {
             {PRODUCT_CATEGORIES.map((category, index) => (
               <NavigationMenuItem key={index}>
                 <NavigationMenuTrigger
-                  className="font-semibold"
+                  className="font-semibold text-md"
                   onMouseEnter={() =>
                     setImageOnHeader(category.subcategories[0].imageHref)
                   }
@@ -117,7 +117,7 @@ const ListItem = React.forwardRef<
         )}
         {...props}
       >
-        <div className="text-sm font-medium leading-none flex flex-row justify-between items-center">
+        <div className="text-md font-medium leading-none flex flex-row justify-between items-center">
           {title || children}{" "}
           <ChevronRight
             size={12}
