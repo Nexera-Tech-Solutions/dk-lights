@@ -3,6 +3,7 @@
 import BestSellingProducts from "./native-components-2/BestSellingProducts/BestSellingProducts";
 import HomeHeroSection from "./native-components-2/HomeHeroSection/HomeHeroSection";
 import ProductCategoryCardSection from "./native-components-2/ProductCategory/ProductCategoryCardSection";
+// TODO: remove the comments in this page
 // import Testimonials from "./native-components-2/Testimonials/Testimonials";
 import { useState, useEffect } from "react";
 import SplashScreen from "./native-components-2/SplashScreen/SplashScreen";
