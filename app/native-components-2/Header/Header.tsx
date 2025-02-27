@@ -29,18 +29,30 @@ const Header = () => {
     >
       <header className="hidden md:flex max-w-full mx-auto pt-3 px-10 flex-row justify-between items-center">
         <Link href="/">
-            <Image src="/global/C-Core-logo-cropped.svg" alt="Logo" width={140} height={100} className="h-fit" />
+          <Image
+            src="/global/logo.png"
+            alt="Logo"
+            width={140}
+            height={100}
+            className="h-fit"
+          />
         </Link>
 
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/home" className="font-semibold mr-12 text-lg">
+              <NavigationMenuLink
+                href="/home"
+                className="font-semibold mr-12 text-lg"
+              >
                 Home
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/about" className="font-semibold mr-12 text-lg">
+              <NavigationMenuLink
+                href="/about"
+                className="font-semibold mr-12 text-lg"
+              >
                 About Us
               </NavigationMenuLink>
             </NavigationMenuItem>
